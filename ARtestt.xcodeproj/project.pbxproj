@@ -14,6 +14,8 @@
 		B9B7F7E12A78EDB0000BAF9E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B7F7E02A78EDB0000BAF9E /* Preview Assets.xcassets */; };
 		B9B7F7EF2A80F045000BAF9E /* Banana.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B9B7F7EE2A80F045000BAF9E /* Banana.rcproject */; };
 		B9B7F7F12A80F07A000BAF9E /* Trashbox.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B9B7F7F02A80F07A000BAF9E /* Trashbox.rcproject */; };
+		C078244D2A84E5480002C32C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078244C2A84E5480002C32C /* Event.swift */; };
+		C078244F2A84E9460002C32C /* HoldedTrash.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078244E2A84E9460002C32C /* HoldedTrash.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		B9B7F7E02A78EDB0000BAF9E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B9B7F7EE2A80F045000BAF9E /* Banana.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Banana.rcproject; sourceTree = "<group>"; };
 		B9B7F7F02A80F07A000BAF9E /* Trashbox.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Trashbox.rcproject; sourceTree = "<group>"; };
+		C078244C2A84E5480002C32C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		C078244E2A84E9460002C32C /* HoldedTrash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldedTrash.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				B9B7F7EE2A80F045000BAF9E /* Banana.rcproject */,
 				B9B7F7DD2A78EDB0000BAF9E /* Assets.xcassets */,
 				B9B7F7DF2A78EDB0000BAF9E /* Preview Content */,
+				C078244C2A84E5480002C32C /* Event.swift */,
+				C078244E2A84E9460002C32C /* HoldedTrash.swift */,
 			);
 			path = ARtestt;
 			sourceTree = "<group>";
@@ -146,10 +152,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C078244F2A84E9460002C32C /* HoldedTrash.swift in Sources */,
 				B959A62B2A823D6F00C32574 /* Bottle.rcproject in Sources */,
 				B9B7F7F12A80F07A000BAF9E /* Trashbox.rcproject in Sources */,
 				B9B7F7DA2A78EDAF000BAF9E /* ContentView.swift in Sources */,
 				B9B7F7D82A78EDAF000BAF9E /* AppDelegate.swift in Sources */,
+				C078244D2A84E5480002C32C /* Event.swift in Sources */,
 				B9B7F7EF2A80F045000BAF9E /* Banana.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -45,8 +45,6 @@ struct ARViewContainer: UIViewRepresentable {
         context.coordinator.view = arView
         arView.isUserInteractionEnabled = true
         
-        ModelEntity()
-        
         arView.addGestureRecognizer(UITapGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handleTap)))
         
         var anchor = AnchorEntity(plane: .horizontal)
@@ -56,14 +54,6 @@ struct ARViewContainer: UIViewRepresentable {
         anchor.addChild(trashbox)
         
         respawnTrash(anchor: anchor)
-        
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-//            let entity = try! Banana.loadBox()
-//            entity.generateCollisionShapes(recursive: true)
-//            let coordinate = randomPosition(forceToGround: true)
-//            entity.position = coordinate ?? randomPosition()
-//            anchor.addChild(entity)
-//        }
         
         arView.scene.addAnchor(anchor)
         
@@ -136,14 +126,29 @@ struct ARViewContainer: UIViewRepresentable {
             
             guard let view = self.view else { return }
             let tapLocation = recognizer.location(in: view)
+            let maxAllowedDistance: Float = 1.3
             
             if let entity = view.entity(at: tapLocation) as? ModelEntity {
                 
                 if let anchorEntity = entity.anchor {
                     
                     if anchorEntity.findEntity(named: "Banana") != nil {
-                        view.scene.anchors.first?.findEntity(named: "Banana")?.removeFromParent()
-                        parent.onHoldingObject()
+                        
+                        let cameraTransform: Transform = view.cameraTransform
+                        let cameraDirection: simd_float3 = cameraTransform.rotation.act(simd_float3(0, 0, -1))
+                        let raycastResults: [CollisionCastHit] = view.scene.raycast(origin: cameraTransform.translation, direction:cameraDirection, length: 100)
+                        
+                        if let firstRaycastResult = raycastResults.first {
+                            print("Object distance : \(firstRaycastResult.distance)")
+                            if firstRaycastResult.distance <= maxAllowedDistance {
+                                view.scene.anchors.first?.findEntity(named: "Banana")?.removeFromParent()
+                                parent.onHoldingObject()
+                            } else {
+                                print("Object too far")
+                            }
+                        }
+
+                        print(raycastResults)
                     } else if anchorEntity.findEntity(named: "TongSampah") != nil {
                         print("tonggg")
                         parent.onReleaseTrash()
