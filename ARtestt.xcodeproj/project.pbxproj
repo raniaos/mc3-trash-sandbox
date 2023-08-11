@@ -14,8 +14,11 @@
 		B9B7F7E12A78EDB0000BAF9E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B7F7E02A78EDB0000BAF9E /* Preview Assets.xcassets */; };
 		B9B7F7EF2A80F045000BAF9E /* Banana.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B9B7F7EE2A80F045000BAF9E /* Banana.rcproject */; };
 		B9B7F7F12A80F07A000BAF9E /* Trashbox.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B9B7F7F02A80F07A000BAF9E /* Trashbox.rcproject */; };
+		C0170D632A861F500026422A /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0170D622A861F500026422A /* GameView.swift */; };
+		C0170D662A861F780026422A /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0170D652A861F780026422A /* ARViewContainer.swift */; };
 		C078244D2A84E5480002C32C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078244C2A84E5480002C32C /* Event.swift */; };
 		C078244F2A84E9460002C32C /* HoldedTrash.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078244E2A84E9460002C32C /* HoldedTrash.swift */; };
+		C08561292A861E8A00167844 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08561282A861E8A00167844 /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +30,11 @@
 		B9B7F7E02A78EDB0000BAF9E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B9B7F7EE2A80F045000BAF9E /* Banana.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Banana.rcproject; sourceTree = "<group>"; };
 		B9B7F7F02A80F07A000BAF9E /* Trashbox.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Trashbox.rcproject; sourceTree = "<group>"; };
+		C0170D622A861F500026422A /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		C0170D652A861F780026422A /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 		C078244C2A84E5480002C32C /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C078244E2A84E9460002C32C /* HoldedTrash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldedTrash.swift; sourceTree = "<group>"; };
+		C08561282A861E8A00167844 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,15 +67,15 @@
 		B9B7F7D62A78EDAF000BAF9E /* ARtestt */ = {
 			isa = PBXGroup;
 			children = (
+				C0170D6A2A8624D20026422A /* Arts */,
+				C0170D692A86243E0026422A /* Models */,
+				C0170D682A86242A0026422A /* Utils */,
+				C0170D672A8623DA0026422A /* Components */,
+				C08561272A861E7C00167844 /* Views */,
 				B9B7F7D72A78EDAF000BAF9E /* AppDelegate.swift */,
 				B9B7F7D92A78EDAF000BAF9E /* ContentView.swift */,
-				B959A62A2A823D6F00C32574 /* Bottle.rcproject */,
-				B9B7F7F02A80F07A000BAF9E /* Trashbox.rcproject */,
-				B9B7F7EE2A80F045000BAF9E /* Banana.rcproject */,
 				B9B7F7DD2A78EDB0000BAF9E /* Assets.xcassets */,
 				B9B7F7DF2A78EDB0000BAF9E /* Preview Content */,
-				C078244C2A84E5480002C32C /* Event.swift */,
-				C078244E2A84E9460002C32C /* HoldedTrash.swift */,
 			);
 			path = ARtestt;
 			sourceTree = "<group>";
@@ -80,6 +86,57 @@
 				B9B7F7E02A78EDB0000BAF9E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C0170D642A861F680026422A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C0170D652A861F780026422A /* ARViewContainer.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C0170D672A8623DA0026422A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C0170D682A86242A0026422A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C078244C2A84E5480002C32C /* Event.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C0170D692A86243E0026422A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C078244E2A84E9460002C32C /* HoldedTrash.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C0170D6A2A8624D20026422A /* Arts */ = {
+			isa = PBXGroup;
+			children = (
+				B959A62A2A823D6F00C32574 /* Bottle.rcproject */,
+				B9B7F7F02A80F07A000BAF9E /* Trashbox.rcproject */,
+				B9B7F7EE2A80F045000BAF9E /* Banana.rcproject */,
+			);
+			path = Arts;
+			sourceTree = "<group>";
+		};
+		C08561272A861E7C00167844 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C0170D642A861F680026422A /* Components */,
+				C08561282A861E8A00167844 /* MenuView.swift */,
+				C0170D622A861F500026422A /* GameView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,12 +210,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C078244F2A84E9460002C32C /* HoldedTrash.swift in Sources */,
+				C08561292A861E8A00167844 /* MenuView.swift in Sources */,
 				B959A62B2A823D6F00C32574 /* Bottle.rcproject in Sources */,
 				B9B7F7F12A80F07A000BAF9E /* Trashbox.rcproject in Sources */,
+				C0170D632A861F500026422A /* GameView.swift in Sources */,
 				B9B7F7DA2A78EDAF000BAF9E /* ContentView.swift in Sources */,
 				B9B7F7D82A78EDAF000BAF9E /* AppDelegate.swift in Sources */,
 				C078244D2A84E5480002C32C /* Event.swift in Sources */,
 				B9B7F7EF2A80F045000BAF9E /* Banana.rcproject in Sources */,
+				C0170D662A861F780026422A /* ARViewContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +347,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ARtestt/Preview Content\"";
-				DEVELOPMENT_TEAM = FDRCB2SGM3;
+				DEVELOPMENT_TEAM = AHLML969C8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -318,7 +378,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ARtestt/Preview Content\"";
-				DEVELOPMENT_TEAM = FDRCB2SGM3;
+				DEVELOPMENT_TEAM = AHLML969C8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
