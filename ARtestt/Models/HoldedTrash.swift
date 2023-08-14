@@ -4,14 +4,7 @@
 //
 //  Created by David Mahbubi on 10/08/23.
 //
-
-import Foundation
-
-enum TrashType {
-    case organic
-    case nonOrganic
-    case medical
-}
+//
 
 let trashCategories: [TrashType: [String]] = [
     .organic: ["Banana", "Apple", "Leaf"],
@@ -22,8 +15,14 @@ let trashCategories: [TrashType: [String]] = [
 struct HoldedTrash {
     
     var name: String
+    var category: TrashType?
     
-    func getType() -> TrashType? {
+    init(name: String) {
+        self.name = name
+        self.category = self.getType()
+    }
+    
+    private func getType() -> TrashType? {
         for (k, v) in trashCategories {
             if (v.contains(name)) {
                 return k

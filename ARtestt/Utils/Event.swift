@@ -5,8 +5,6 @@
 //  Created by David Mahbubi on 10/08/23.
 //
 
-import Foundation
-
 class Event {
     
     static var listeners: [String: () -> Void] = [:]

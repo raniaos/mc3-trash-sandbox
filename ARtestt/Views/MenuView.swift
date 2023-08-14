@@ -9,37 +9,71 @@ import SwiftUI
 
 struct MenuView: View {
     var body: some View {
-        VStack {
-            Image("ic_banana")
+        ZStack {
+            Image("MenuBackground")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 150)
-            Spacer()
-                .frame(height: 60)
             VStack {
-                NavigationLink(destination: GameView(isHoldingObject: false)) {
-                    Text("Play")
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                        .padding(.vertical, 20)
-                        .padding(.horizontal, 50)
-                        .background(.blue)
-                        .cornerRadius(13)
+                Text("PICK ME UP")
+                    .foregroundColor(Color(red: 0.27, green: 0.48, blue: 0.5))
+                    .font(.custom("Lilita One", size: 46))
+                Spacer()
+                    .frame(height: 100)
+                VStack {
+                    NavigationLink(destination: GameView(isHoldingObject: false)) {
+                        Text("")
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 30)
+                            .foregroundColor(Color(red: 0.27, green: 0.48, blue: 0.5))
+                            .fontWeight(.bold)
+                            .padding(.vertical, 20)
+                            .padding(.horizontal, 50)
+                            .background(.white)
+                            .overlay(
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 30)
+                                        .inset(by: 3)
+                                        .stroke(Color(red: 0.56, green: 0.69, blue: 0.87), lineWidth: 15)
+                                        .background(.white)
+                                    Text("START")
+                                        .foregroundColor(Color(red: 0.27, green: 0.48, blue: 0.5))
+                                        .fontWeight(.bold)
+                                
+                                }
+                            )
+                            .cornerRadius(30)
+                    }
+                    Spacer()
+                        .frame(height: 20)
+                    NavigationLink(destination: GameView(isHoldingObject: false)) {
+                        Text("")
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 30)
+                            .foregroundColor(Color(red: 0.27, green: 0.48, blue: 0.5))
+                            .fontWeight(.bold)
+                            .padding(.vertical, 20)
+                            .padding(.horizontal, 50)
+                            .background(.white)
+                            .overlay(
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 30)
+                                        .inset(by: 3)
+                                        .stroke(Color(red: 0.56, green: 0.69, blue: 0.87), lineWidth: 15)
+                                        .background(.white)
+                                    Text("HOW TO PLAY")
+                                        .foregroundColor(Color(red: 0.27, green: 0.48, blue: 0.5))
+                                        .fontWeight(.bold)
+                                
+                                }
+                            )
+                            .cornerRadius(30)
+                    }
+
                 }
-                NavigationLink(destination: GameView(isHoldingObject: false)) {
-                    Text("How to Play")
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                        .padding(.vertical, 20)
-                        .padding(.horizontal, 50)
-                        .background(.blue)
-                        .cornerRadius(13)
-                }
+                .padding(.horizontal, 50)
             }
-            .padding(.horizontal)
         }
+        .ignoresSafeArea()
     }
 }
 

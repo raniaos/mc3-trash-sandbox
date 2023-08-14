@@ -25,7 +25,7 @@ struct ARViewContainer: UIViewRepresentable {
         
         arView.addGestureRecognizer(UITapGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handleTap)))
         
-        var anchor = AnchorEntity(plane: .horizontal)
+        var anchor = AnchorEntity(/* plane: .horizontal*/)
         
         let trashbox = try! Trashbox.loadBox()
         trashbox.generateCollisionShapes(recursive: true)

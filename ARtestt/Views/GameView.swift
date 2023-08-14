@@ -18,21 +18,47 @@ struct GameView: View {
             VStack {
                 Spacer()
                     .frame(height: 15)
-                if isHoldingObject {
-                    Text("You are holding")
-                    Text("Banana")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                } else {
-                    Text("Look around to find a trash")
+                HStack {
+                    HStack {
+                        Image("SaveMeIcon")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 70)
+                            .zIndex(2)
+                        RoundedRectangle(cornerRadius: 20)
+                            .padding(.leading, -40)
+                            .foregroundStyle(Color(red: 0.56, green: 0.69, blue: 0.87))
+                            .frame(width: 70, height: 50)
+                            .zIndex(1)
+                    }
+                    Spacer()
+                    ZStack {
+                        HStack {
+                            Text("1/20")
+                                .foregroundStyle(.black)
+                                .fontWeight(.bold)
+                            Image("AppleIcon")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 15)
+                        }
+                            .zIndex(1)
+                        RoundedRectangle(cornerRadius: 20)
+                            .foregroundStyle(Color(red: 0.56, green: 0.69, blue: 0.87))
+                            .frame(width: 100, height: 50)
+                            .zIndex(0)
+                    }
                 }
+                .padding(.horizontal, 10)
                 Spacer()
-                Text("Item(s) collected : ")
-                Text("1 / 20")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
+                Popup(state: .finish)
+                    .frame(maxWidth: 350, maxHeight: 300)
+                Spacer()
+                Alert(message: "You’ve thrown the trash to the wrong bin")
+                    .frame(maxWidth: 300, maxHeight: 100)
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
     
     func onTrashPicked() -> Void {
