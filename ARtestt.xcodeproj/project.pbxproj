@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B959A62B2A823D6F00C32574 /* Bottle.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B959A62A2A823D6F00C32574 /* Bottle.rcproject */; };
 		B9B7F7D82A78EDAF000BAF9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B7F7D72A78EDAF000BAF9E /* AppDelegate.swift */; };
 		B9B7F7DA2A78EDAF000BAF9E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B7F7D92A78EDAF000BAF9E /* ContentView.swift */; };
 		B9B7F7DE2A78EDB0000BAF9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B7F7DD2A78EDB0000BAF9E /* Assets.xcassets */; };
 		B9B7F7E12A78EDB0000BAF9E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9B7F7E02A78EDB0000BAF9E /* Preview Assets.xcassets */; };
-		B9B7F7EF2A80F045000BAF9E /* Banana.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B9B7F7EE2A80F045000BAF9E /* Banana.rcproject */; };
-		B9B7F7F12A80F07A000BAF9E /* Trashbox.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = B9B7F7F02A80F07A000BAF9E /* Trashbox.rcproject */; };
 		C0170D632A861F500026422A /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0170D622A861F500026422A /* GameView.swift */; };
 		C0170D662A861F780026422A /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0170D652A861F780026422A /* ARViewContainer.swift */; };
 		C0170D6C2A8625A70026422A /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0170D6B2A8625A70026422A /* Enums.swift */; };
@@ -21,18 +18,20 @@
 		C078244F2A84E9460002C32C /* HoldedTrash.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078244E2A84E9460002C32C /* HoldedTrash.swift */; };
 		C081FCEC2A8A14C90031E729 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081FCEB2A8A14C90031E729 /* Alert.swift */; };
 		C081FCEE2A8A1BBD0031E729 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081FCED2A8A1BBD0031E729 /* Popup.swift */; };
+		C081FCF02A8A230A0031E729 /* Mask.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C081FCEF2A8A230A0031E729 /* Mask.rcproject */; };
+		C081FCF22A8A23180031E729 /* Battery.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C081FCF12A8A23180031E729 /* Battery.rcproject */; };
+		C081FCF62A8A23540031E729 /* B3TrashBox.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C081FCF32A8A23540031E729 /* B3TrashBox.rcproject */; };
+		C081FCF72A8A23540031E729 /* OrganicTrashBox.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C081FCF42A8A23540031E729 /* OrganicTrashBox.rcproject */; };
+		C081FCF82A8A23540031E729 /* Banana2.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C081FCF52A8A23540031E729 /* Banana2.rcproject */; };
 		C08561292A861E8A00167844 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08561282A861E8A00167844 /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B959A62A2A823D6F00C32574 /* Bottle.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Bottle.rcproject; sourceTree = "<group>"; };
 		B9B7F7D42A78EDAF000BAF9E /* ARtestt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARtestt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B7F7D72A78EDAF000BAF9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9B7F7D92A78EDAF000BAF9E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B9B7F7DD2A78EDB0000BAF9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9B7F7E02A78EDB0000BAF9E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B9B7F7EE2A80F045000BAF9E /* Banana.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Banana.rcproject; sourceTree = "<group>"; };
-		B9B7F7F02A80F07A000BAF9E /* Trashbox.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Trashbox.rcproject; sourceTree = "<group>"; };
 		C0170D622A861F500026422A /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		C0170D652A861F780026422A /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 		C0170D6B2A8625A70026422A /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -41,6 +40,11 @@
 		C078244E2A84E9460002C32C /* HoldedTrash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldedTrash.swift; sourceTree = "<group>"; };
 		C081FCEB2A8A14C90031E729 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		C081FCED2A8A1BBD0031E729 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
+		C081FCEF2A8A230A0031E729 /* Mask.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Mask.rcproject; sourceTree = "<group>"; };
+		C081FCF12A8A23180031E729 /* Battery.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Battery.rcproject; sourceTree = "<group>"; };
+		C081FCF32A8A23540031E729 /* B3TrashBox.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = B3TrashBox.rcproject; sourceTree = "<group>"; };
+		C081FCF42A8A23540031E729 /* OrganicTrashBox.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = OrganicTrashBox.rcproject; sourceTree = "<group>"; };
+		C081FCF52A8A23540031E729 /* Banana2.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Banana2.rcproject; sourceTree = "<group>"; };
 		C08561282A861E8A00167844 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		C0DEDE642A86394000224C09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,7 +84,6 @@
 				C0170D6A2A8624D20026422A /* Arts */,
 				C0170D692A86243E0026422A /* Models */,
 				C0170D682A86242A0026422A /* Utils */,
-				C0170D672A8623DA0026422A /* Components */,
 				C08561272A861E7C00167844 /* Views */,
 				B9B7F7D72A78EDAF000BAF9E /* AppDelegate.swift */,
 				B9B7F7D92A78EDAF000BAF9E /* ContentView.swift */,
@@ -101,16 +104,9 @@
 		C0170D642A861F680026422A /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				C0170D652A861F780026422A /* ARViewContainer.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		C0170D672A8623DA0026422A /* Components */ = {
-			isa = PBXGroup;
-			children = (
 				C081FCEB2A8A14C90031E729 /* Alert.swift */,
 				C081FCED2A8A1BBD0031E729 /* Popup.swift */,
+				C0170D652A861F780026422A /* ARViewContainer.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -135,9 +131,11 @@
 		C0170D6A2A8624D20026422A /* Arts */ = {
 			isa = PBXGroup;
 			children = (
-				B959A62A2A823D6F00C32574 /* Bottle.rcproject */,
-				B9B7F7F02A80F07A000BAF9E /* Trashbox.rcproject */,
-				B9B7F7EE2A80F045000BAF9E /* Banana.rcproject */,
+				C081FCF32A8A23540031E729 /* B3TrashBox.rcproject */,
+				C081FCF52A8A23540031E729 /* Banana2.rcproject */,
+				C081FCF42A8A23540031E729 /* OrganicTrashBox.rcproject */,
+				C081FCF12A8A23180031E729 /* Battery.rcproject */,
+				C081FCEF2A8A230A0031E729 /* Mask.rcproject */,
 			);
 			path = Arts;
 			sourceTree = "<group>";
@@ -230,17 +228,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C081FCF82A8A23540031E729 /* Banana2.rcproject in Sources */,
 				C078244F2A84E9460002C32C /* HoldedTrash.swift in Sources */,
+				C081FCF72A8A23540031E729 /* OrganicTrashBox.rcproject in Sources */,
 				C081FCEE2A8A1BBD0031E729 /* Popup.swift in Sources */,
+				C081FCF22A8A23180031E729 /* Battery.rcproject in Sources */,
 				C08561292A861E8A00167844 /* MenuView.swift in Sources */,
-				B959A62B2A823D6F00C32574 /* Bottle.rcproject in Sources */,
-				B9B7F7F12A80F07A000BAF9E /* Trashbox.rcproject in Sources */,
 				C0170D632A861F500026422A /* GameView.swift in Sources */,
+				C081FCF02A8A230A0031E729 /* Mask.rcproject in Sources */,
 				B9B7F7DA2A78EDAF000BAF9E /* ContentView.swift in Sources */,
 				C081FCEC2A8A14C90031E729 /* Alert.swift in Sources */,
+				C081FCF62A8A23540031E729 /* B3TrashBox.rcproject in Sources */,
 				B9B7F7D82A78EDAF000BAF9E /* AppDelegate.swift in Sources */,
 				C078244D2A84E5480002C32C /* Event.swift in Sources */,
-				B9B7F7EF2A80F045000BAF9E /* Banana.rcproject in Sources */,
 				C0170D662A861F780026422A /* ARViewContainer.swift in Sources */,
 				C0170D6C2A8625A70026422A /* Enums.swift in Sources */,
 			);

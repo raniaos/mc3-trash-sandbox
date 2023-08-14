@@ -13,38 +13,51 @@ import Combine
 struct ARViewContainer: UIViewRepresentable {
     
     @State var trashesThrown: Int = 0
+    @State var isHoldingObject: Bool = false
+    @State var objectName: String = ""
     
     var onHoldingObject: () -> Void
     var onReleaseTrash: () -> Void
+    var onFalseTrash: () -> Void
     
     func makeUIView(context: Context) -> ARView {
         
         let arView = ARView(frame: .zero)
+//        arView.debugOptions = [.showPhysics]
         context.coordinator.view = arView
         arView.isUserInteractionEnabled = true
-        
         arView.addGestureRecognizer(UITapGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handleTap)))
         
-        var anchor = AnchorEntity(/* plane: .horizontal*/)
         
-        let trashbox = try! Trashbox.loadBox()
-        trashbox.generateCollisionShapes(recursive: true)
-        anchor.addChild(trashbox)
+        let anchor = AnchorEntity(plane: .horizontal)
         
-        respawnTrash(anchor: anchor)
+        let b3 = try! B3TrashBox.loadBox()
+        b3.generateCollisionShapes(recursive: true)
+        anchor.addChild(b3)
+        
+        var position: SIMD3<Float>? = b3.findEntity(named: "B3")?.position
+        position?.x -= 0.5
+        
+        let organic = try! OrganicTrashBox.loadBox()
+        organic.generateCollisionShapes(recursive: true)
+        (organic.findEntity(named: "Organic")!).position = position!
+        anchor.addChild(organic)
+        
+        respawnTrash(from: arView)
         
         arView.scene.addAnchor(anchor)
-        
         return arView
     }
     
-    func respawnTrash(anchor: AnchorEntity) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            let entity = try! Banana.loadBox()
+    func respawnTrash(from: ARView) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            let anchor = AnchorEntity(plane: .horizontal)
+            let entity = pickRandomTrash()
             entity.generateCollisionShapes(recursive: true)
             let coordinate = randomPosition(forceToGround: true)
-            entity.position = coordinate ?? randomPosition()
+            entity.position = coordinate
             anchor.addChild(entity)
+            from.scene.addAnchor(anchor)
         }
     }
     
@@ -58,31 +71,19 @@ struct ARViewContainer: UIViewRepresentable {
     
     func pickRandomTrash() -> Entity {
         
-        let bananaTrash = try! Banana.loadBox()
-        let bottleTrash = try! Trashbox.loadBox()
+        let bananaTrash = try! Banana2.loadScene()
+        let batteryTrash = try! Battery.loadBox()
+//        let bottleTrash = try! Bottle.loadBox()
+        let maskTrash = try! Mask.loadBox()
         
         let trashses: [Entity] = [
-            bananaTrash.findEntity(named: "Banana") as! Entity,
-            bottleTrash.findEntity(named: "TongSampah") as! Entity
+            bananaTrash.findEntity(named: "banana")!,
+            batteryTrash.findEntity(named: "Battery")!,
+//            bottleTrash.findEntity(named: "Bottle") as! Entity,
+            maskTrash.findEntity(named: "Mask")!
         ]
         
         return trashses.randomElement()!
-    }
-    
-    
-    func getEntities(withName: String, from: ARView) {
-        /*
-         1 - Buat loop untuk kumpulin entity dengan nama "withName" di dalam arView.scene.anchors
-         2 - kumpulin hasil entities-nya ke dalam sebuah variable
-         3 - di dalam array entities tadi, hapus satu2.
-         */
-        
-        //        let entities = from.scene.anchors.first?.findEntity(named: withName)
-        //        print(entities)
-        
-        //        while <#condition#> {
-        //            <#code#>
-        //        }
     }
     
     func updateUIView(_ uiView: ARView, context: Context) {}
@@ -100,8 +101,8 @@ struct ARViewContainer: UIViewRepresentable {
             self.parent = parent
         }
         
+        
         @objc func handleTap(_ recognizer: UITapGestureRecognizer) {
-            
             guard let view = self.view else { return }
             let tapLocation = recognizer.location(in: view)
             let maxAllowedDistance: Float = 1.3
@@ -110,30 +111,97 @@ struct ARViewContainer: UIViewRepresentable {
                 
                 if let anchorEntity = entity.anchor {
                     
-                    if anchorEntity.findEntity(named: "Banana") != nil {
-                        
-                        let cameraTransform: Transform = view.cameraTransform
-                        let cameraDirection: simd_float3 = cameraTransform.rotation.act(simd_float3(0, 0, -1))
-                        let raycastResults: [CollisionCastHit] = view.scene.raycast(origin: cameraTransform.translation, direction:cameraDirection, length: 100)
-                        
-                        if let firstRaycastResult = raycastResults.first {
-                            print("Object distance : \(firstRaycastResult.distance)")
-                            if firstRaycastResult.distance <= maxAllowedDistance {
-                                view.scene.anchors.first?.findEntity(named: "Banana")?.removeFromParent()
+                    let cameraTransform: Transform = view.cameraTransform
+                    let cameraDirection: simd_float3 = cameraTransform.rotation.act(simd_float3(0, 0, -1))
+                    let raycastResults: [CollisionCastHit] = view.scene.raycast(origin: cameraTransform.translation, direction:cameraDirection, length: 100)
+                    
+                    if let firstRaycastResult = raycastResults.first {
+                        print("Object distance : \(firstRaycastResult.distance)")
+                        if firstRaycastResult.distance <= maxAllowedDistance {
+                            if anchorEntity.findEntity(named: "Paper") != nil {
+                                print("sampah paper")
+                                if parent.isHoldingObject {
+                                    if parent.objectName != "Paper" {
+                                        parent.onFalseTrash()
+                                    }
+                                    parent.onReleaseTrash()
+                                    parent.respawnTrash(from: view)
+                                    parent.isHoldingObject = false
+                                }
+                            }
+                            else if anchorEntity.findEntity(named: "Organic") != nil {
+                                print("sampah organic")
+                                if parent.isHoldingObject {
+                                    if parent.objectName != "Banana" {
+                                        parent.onFalseTrash()
+                                    }
+                                    parent.onReleaseTrash()
+                                    parent.respawnTrash(from: view)
+                                    parent.isHoldingObject = false
+                                }
+                            }
+                            else if anchorEntity.findEntity(named: "B3") != nil {
+                                print("sampah b3")
+                                if parent.isHoldingObject {
+                                    if parent.objectName != "Battery" {
+                                        parent.onFalseTrash()
+                                    }
+                                    parent.onReleaseTrash()
+                                    parent.respawnTrash(from: view)
+                                    parent.isHoldingObject = false
+                                }
+                            }
+                            else if anchorEntity.findEntity(named: "Anorganic") != nil {
+                                print("sampah anorganic")
+                                if parent.isHoldingObject {
+                                    if parent.objectName != "Bottle" {
+                                        parent.onFalseTrash()
+                                    }
+                                    parent.onReleaseTrash()
+                                    parent.respawnTrash(from: view)
+                                    parent.isHoldingObject = false
+                                }
+                            }
+                            else if anchorEntity.findEntity(named: "Residu") != nil {
+                                print("sampah residu")
+                                if parent.isHoldingObject {
+                                    if parent.objectName != "Mask" {
+                                        parent.onFalseTrash()
+                                    }
+                                    parent.onReleaseTrash()
+                                    parent.respawnTrash(from: view)
+                                    parent.isHoldingObject = false
+                                }
+                            }
+                            else {
+                                if anchorEntity.findEntity(named: "banana") != nil {
+                                    parent.objectName = "Banana"
+                                    print("Banana")
+                                }
+                                else if anchorEntity.findEntity(named: "Bottle") != nil {
+                                    parent.objectName = "Bottle"
+                                    print("Bottle")
+                                }
+                                else if anchorEntity.findEntity(named: "Battery") != nil {
+                                    parent.objectName = "Battery"
+                                    print("Battery")
+                                }
+                                else if anchorEntity.findEntity(named: "Paper") != nil {
+                                    parent.objectName = "Paper"
+                                    print("Paper")
+                                }
+                                else if anchorEntity.findEntity(named: "Mask") != nil {
+                                    parent.objectName = "Mask"
+                                    print("Mask")
+                                }
+                                view.scene.anchors.remove(at: 1)
                                 parent.onHoldingObject()
-                            } else {
-                                print("Object too far")
+                                parent.isHoldingObject = true
                             }
                         }
-
-                        print(raycastResults)
-                    } else if anchorEntity.findEntity(named: "TongSampah") != nil {
-                        print("tonggg")
-                        parent.onReleaseTrash()
-//                        parent.respawnTrash(anchor: anchor)
+                        print("")
                     }
                 }
-                
             }
         }
     }

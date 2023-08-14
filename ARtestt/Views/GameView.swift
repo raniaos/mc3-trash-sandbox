@@ -14,7 +14,11 @@ struct GameView: View {
     
     var body: some View {
         ZStack {
-            ARViewContainer(onHoldingObject: onTrashPicked, onReleaseTrash: onReleaseTrash).edgesIgnoringSafeArea(.all)
+            ARViewContainer(
+                onHoldingObject: onTrashPicked,
+                onReleaseTrash: onReleaseTrash,
+                onFalseTrash: onFalseTrash
+            ).edgesIgnoringSafeArea(.all)
             VStack {
                 Spacer()
                     .frame(height: 15)
@@ -51,8 +55,8 @@ struct GameView: View {
                 }
                 .padding(.horizontal, 10)
                 Spacer()
-                Popup(state: .finish)
-                    .frame(maxWidth: 350, maxHeight: 300)
+//                Popup(state: .finish)
+//                    .frame(maxWidth: 350, maxHeight: 300)
                 Spacer()
                 Alert(message: "You’ve thrown the trash to the wrong bin")
                     .frame(maxWidth: 300, maxHeight: 100)
@@ -62,6 +66,10 @@ struct GameView: View {
     }
     
     func onTrashPicked() -> Void {
+        
+    }
+    
+    func onFalseTrash() -> Void {
         
     }
     
