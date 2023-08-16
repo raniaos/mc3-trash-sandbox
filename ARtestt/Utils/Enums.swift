@@ -5,10 +5,12 @@
 //  Created by David Mahbubi on 11/08/23.
 //
 
-enum TrashType {
+enum TrashType: String, CaseIterable {
+    case paper
     case organic
-    case nonOrganic
-    case medical
+    case b3
+    case anorganic
+    case residu
 }
 
 enum GameEndState {

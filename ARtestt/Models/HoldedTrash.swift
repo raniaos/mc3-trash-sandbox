@@ -7,9 +7,11 @@
 //
 
 let trashCategories: [TrashType: [String]] = [
-    .organic: ["Banana", "Apple", "Leaf"],
-    .nonOrganic: ["Plastic", "Bottle"],
-    .medical: ["Mask", "Medicine"]
+    .organic: ["Banana"],
+    .anorganic: ["Bottle"],
+    .b3: ["Battery"],
+    .paper: ["Paper"],
+    .residu: ["Mask"],
 ]
 
 struct HoldedTrash {
@@ -19,10 +21,10 @@ struct HoldedTrash {
     
     init(name: String) {
         self.name = name
-        self.category = self.getType()
+        self.category = self.determineType()
     }
     
-    private func getType() -> TrashType? {
+    private func determineType() -> TrashType? {
         for (k, v) in trashCategories {
             if (v.contains(name)) {
                 return k

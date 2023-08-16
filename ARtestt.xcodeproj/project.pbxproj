@@ -18,12 +18,19 @@
 		C078244F2A84E9460002C32C /* HoldedTrash.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078244E2A84E9460002C32C /* HoldedTrash.swift */; };
 		C081FCEC2A8A14C90031E729 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081FCEB2A8A14C90031E729 /* Alert.swift */; };
 		C081FCEE2A8A1BBD0031E729 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081FCED2A8A1BBD0031E729 /* Popup.swift */; };
-		C081FCF02A8A230A0031E729 /* Mask.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C081FCEF2A8A230A0031E729 /* Mask.rcproject */; };
-		C081FCF22A8A23180031E729 /* Battery.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C081FCF12A8A23180031E729 /* Battery.rcproject */; };
-		C081FCF62A8A23540031E729 /* B3TrashBox.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C081FCF32A8A23540031E729 /* B3TrashBox.rcproject */; };
-		C081FCF72A8A23540031E729 /* OrganicTrashBox.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C081FCF42A8A23540031E729 /* OrganicTrashBox.rcproject */; };
-		C081FCF82A8A23540031E729 /* Banana2.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C081FCF52A8A23540031E729 /* Banana2.rcproject */; };
+		C081FCFA2A8A35890031E729 /* TrashBin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C081FCF92A8A35890031E729 /* TrashBin.swift */; };
 		C08561292A861E8A00167844 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08561282A861E8A00167844 /* MenuView.swift */; };
+		C0D314C12A8CAA9500C552B7 /* Banana.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C0EFD6F52A8B7D5600BD5F90 /* Banana.rcproject */; };
+		C0D314C32A8CAB0E00C552B7 /* B3TrashBox.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C0EFD6F12A8B7D5500BD5F90 /* B3TrashBox.rcproject */; };
+		C0D314C52A8CABC400C552B7 /* Battery.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C0EFD6F22A8B7D5500BD5F90 /* Battery.rcproject */; };
+		C0D314C72A8CABE300C552B7 /* Mask.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C0EFD6ED2A8B7D5500BD5F90 /* Mask.rcproject */; };
+		C0D314C92A8CAC4200C552B7 /* OrganicTrashBox.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C0EFD6F32A8B7D5600BD5F90 /* OrganicTrashBox.rcproject */; };
+		C0EFD6D82A8B750600BD5F90 /* LilitaOne.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0170D6E2A8637B10026422A /* LilitaOne.ttf */; };
+		C0EFD6F82A8B7D5600BD5F90 /* Paper.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C0EFD6EE2A8B7D5500BD5F90 /* Paper.rcproject */; };
+		C0EFD6F92A8B7D5600BD5F90 /* AnorganicTrashBox.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C0EFD6EF2A8B7D5500BD5F90 /* AnorganicTrashBox.rcproject */; };
+		C0EFD6FA2A8B7D5600BD5F90 /* Bottle.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C0EFD6F02A8B7D5500BD5F90 /* Bottle.rcproject */; };
+		C0EFD6FE2A8B7D5600BD5F90 /* PaperTrashBox.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C0EFD6F42A8B7D5600BD5F90 /* PaperTrashBox.rcproject */; };
+		C0EFD7002A8B7D5600BD5F90 /* ResiduTrashBox.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = C0EFD6F62A8B7D5600BD5F90 /* ResiduTrashBox.rcproject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,13 +47,19 @@
 		C078244E2A84E9460002C32C /* HoldedTrash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldedTrash.swift; sourceTree = "<group>"; };
 		C081FCEB2A8A14C90031E729 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		C081FCED2A8A1BBD0031E729 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
-		C081FCEF2A8A230A0031E729 /* Mask.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Mask.rcproject; sourceTree = "<group>"; };
-		C081FCF12A8A23180031E729 /* Battery.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Battery.rcproject; sourceTree = "<group>"; };
-		C081FCF32A8A23540031E729 /* B3TrashBox.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = B3TrashBox.rcproject; sourceTree = "<group>"; };
-		C081FCF42A8A23540031E729 /* OrganicTrashBox.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = OrganicTrashBox.rcproject; sourceTree = "<group>"; };
-		C081FCF52A8A23540031E729 /* Banana2.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Banana2.rcproject; sourceTree = "<group>"; };
+		C081FCF92A8A35890031E729 /* TrashBin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashBin.swift; sourceTree = "<group>"; };
 		C08561282A861E8A00167844 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		C0DEDE642A86394000224C09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C0EFD6ED2A8B7D5500BD5F90 /* Mask.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Mask.rcproject; sourceTree = "<group>"; };
+		C0EFD6EE2A8B7D5500BD5F90 /* Paper.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Paper.rcproject; sourceTree = "<group>"; };
+		C0EFD6EF2A8B7D5500BD5F90 /* AnorganicTrashBox.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = AnorganicTrashBox.rcproject; sourceTree = "<group>"; };
+		C0EFD6F02A8B7D5500BD5F90 /* Bottle.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Bottle.rcproject; sourceTree = "<group>"; };
+		C0EFD6F12A8B7D5500BD5F90 /* B3TrashBox.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = B3TrashBox.rcproject; sourceTree = "<group>"; };
+		C0EFD6F22A8B7D5500BD5F90 /* Battery.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Battery.rcproject; sourceTree = "<group>"; };
+		C0EFD6F32A8B7D5600BD5F90 /* OrganicTrashBox.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = OrganicTrashBox.rcproject; sourceTree = "<group>"; };
+		C0EFD6F42A8B7D5600BD5F90 /* PaperTrashBox.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = PaperTrashBox.rcproject; sourceTree = "<group>"; };
+		C0EFD6F52A8B7D5600BD5F90 /* Banana.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Banana.rcproject; sourceTree = "<group>"; };
+		C0EFD6F62A8B7D5600BD5F90 /* ResiduTrashBox.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = ResiduTrashBox.rcproject; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				C0DEDE642A86394000224C09 /* Info.plist */,
-				C0170D6D2A8637650026422A /* Fonts */,
+				C0170D6D2A8637650026422A /* Font */,
 				C0170D6A2A8624D20026422A /* Arts */,
 				C0170D692A86243E0026422A /* Models */,
 				C0170D682A86242A0026422A /* Utils */,
@@ -124,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				C078244E2A84E9460002C32C /* HoldedTrash.swift */,
+				C081FCF92A8A35890031E729 /* TrashBin.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -131,21 +145,26 @@
 		C0170D6A2A8624D20026422A /* Arts */ = {
 			isa = PBXGroup;
 			children = (
-				C081FCF32A8A23540031E729 /* B3TrashBox.rcproject */,
-				C081FCF52A8A23540031E729 /* Banana2.rcproject */,
-				C081FCF42A8A23540031E729 /* OrganicTrashBox.rcproject */,
-				C081FCF12A8A23180031E729 /* Battery.rcproject */,
-				C081FCEF2A8A230A0031E729 /* Mask.rcproject */,
+				C0EFD6EF2A8B7D5500BD5F90 /* AnorganicTrashBox.rcproject */,
+				C0EFD6F12A8B7D5500BD5F90 /* B3TrashBox.rcproject */,
+				C0EFD6F52A8B7D5600BD5F90 /* Banana.rcproject */,
+				C0EFD6F22A8B7D5500BD5F90 /* Battery.rcproject */,
+				C0EFD6F02A8B7D5500BD5F90 /* Bottle.rcproject */,
+				C0EFD6ED2A8B7D5500BD5F90 /* Mask.rcproject */,
+				C0EFD6F32A8B7D5600BD5F90 /* OrganicTrashBox.rcproject */,
+				C0EFD6EE2A8B7D5500BD5F90 /* Paper.rcproject */,
+				C0EFD6F42A8B7D5600BD5F90 /* PaperTrashBox.rcproject */,
+				C0EFD6F62A8B7D5600BD5F90 /* ResiduTrashBox.rcproject */,
 			);
 			path = Arts;
 			sourceTree = "<group>";
 		};
-		C0170D6D2A8637650026422A /* Fonts */ = {
+		C0170D6D2A8637650026422A /* Font */ = {
 			isa = PBXGroup;
 			children = (
 				C0170D6E2A8637B10026422A /* LilitaOne.ttf */,
 			);
-			path = Fonts;
+			path = Font;
 			sourceTree = "<group>";
 		};
 		C08561272A861E7C00167844 /* Views */ = {
@@ -218,6 +237,7 @@
 			files = (
 				B9B7F7E12A78EDB0000BAF9E /* Preview Assets.xcassets in Resources */,
 				B9B7F7DE2A78EDB0000BAF9E /* Assets.xcassets in Resources */,
+				C0EFD6D82A8B750600BD5F90 /* LilitaOne.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,19 +248,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C081FCF82A8A23540031E729 /* Banana2.rcproject in Sources */,
 				C078244F2A84E9460002C32C /* HoldedTrash.swift in Sources */,
-				C081FCF72A8A23540031E729 /* OrganicTrashBox.rcproject in Sources */,
 				C081FCEE2A8A1BBD0031E729 /* Popup.swift in Sources */,
-				C081FCF22A8A23180031E729 /* Battery.rcproject in Sources */,
+				C0EFD6FA2A8B7D5600BD5F90 /* Bottle.rcproject in Sources */,
+				C081FCFA2A8A35890031E729 /* TrashBin.swift in Sources */,
+				C0EFD6FE2A8B7D5600BD5F90 /* PaperTrashBox.rcproject in Sources */,
 				C08561292A861E8A00167844 /* MenuView.swift in Sources */,
 				C0170D632A861F500026422A /* GameView.swift in Sources */,
-				C081FCF02A8A230A0031E729 /* Mask.rcproject in Sources */,
 				B9B7F7DA2A78EDAF000BAF9E /* ContentView.swift in Sources */,
+				C0D314C92A8CAC4200C552B7 /* OrganicTrashBox.rcproject in Sources */,
 				C081FCEC2A8A14C90031E729 /* Alert.swift in Sources */,
-				C081FCF62A8A23540031E729 /* B3TrashBox.rcproject in Sources */,
+				C0EFD6F92A8B7D5600BD5F90 /* AnorganicTrashBox.rcproject in Sources */,
+				C0D314C52A8CABC400C552B7 /* Battery.rcproject in Sources */,
+				C0D314C32A8CAB0E00C552B7 /* B3TrashBox.rcproject in Sources */,
+				C0D314C72A8CABE300C552B7 /* Mask.rcproject in Sources */,
 				B9B7F7D82A78EDAF000BAF9E /* AppDelegate.swift in Sources */,
 				C078244D2A84E5480002C32C /* Event.swift in Sources */,
+				C0D314C12A8CAA9500C552B7 /* Banana.rcproject in Sources */,
+				C0EFD6F82A8B7D5600BD5F90 /* Paper.rcproject in Sources */,
+				C0EFD7002A8B7D5600BD5F90 /* ResiduTrashBox.rcproject in Sources */,
 				C0170D662A861F780026422A /* ARViewContainer.swift in Sources */,
 				C0170D6C2A8625A70026422A /* Enums.swift in Sources */,
 			);

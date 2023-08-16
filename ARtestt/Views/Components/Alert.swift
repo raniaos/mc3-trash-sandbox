@@ -32,7 +32,7 @@ struct Alert: View {
         }
     }
 }
-
-#Preview {
-    Alert(message: "You’ve thrown the trash to the wrong bin")
-}
+//
+//#Preview {
+//    Alert(message: "You’ve thrown the trash to the wrong bin")
+//}

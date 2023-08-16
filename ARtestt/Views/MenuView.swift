@@ -14,11 +14,15 @@ struct MenuView: View {
                 .resizable()
                 .scaledToFit()
             VStack {
-                Text("PICK ME UP")
-                    .foregroundColor(Color(red: 0.27, green: 0.48, blue: 0.5))
-                    .font(.custom("Lilita One", size: 46))
                 Spacer()
-                    .frame(height: 100)
+                    .frame(height: 300)
+                Text("SAVE MY HOME")
+                    .foregroundColor(Color(red: 0.04, green: 0.2, blue: 0.19))
+                    .font(.custom("Lilita One", size: 46))
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 10)
+                Spacer()
+                    .frame(height: 60)
                 VStack {
                     NavigationLink(destination: GameView(isHoldingObject: false)) {
                         Text("")

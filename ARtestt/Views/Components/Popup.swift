@@ -33,6 +33,6 @@ struct Popup: View {
     }
 }
 
-#Preview {
-    Popup(state: .finish)
-}
+//#Preview {
+//    Popup(state: .finish)
+//}
